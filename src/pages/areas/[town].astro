@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { areas } from '../../data/areas';
+
+export function getStaticPaths() {
+  return areas.map((area) => ({
+    params: { town: area.slug },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+const town = area.name;
+
+const title = `Tree Surgeon ${town} | Tree Felling, Removal & Stump Grinding`;
+const description = `Tree surgeon in ${town}. Tree felling, removal, stump grinding, crown reduction and emergency work in ${town} and surrounding County Durham villages. Free inspection and written quote.`;
+---
+
+<Layout title={title} description={description}>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/areas/">Areas we cover</a> / {town}
+      </nav>
+      <h1>Tree Surgeon {town}</h1>
+      <p>Tree felling, removal, stump grinding and pruning in {town} and the surrounding County Durham villages.</p>
+    </div>
+  </section>
+
+  <section class="page-main">
+    <div class="container contact-grid">
+      <div class="prose">
+        <h2>Tree services in {town}</h2>
+        <p>{area.intro}</p>
+        <p>{area.work}</p>
+        <p>All work includes a free inspection and fixed written quote, with timber, branches and green waste taken away when the job is done.</p>
+
+        <h2>Services available in {town}</h2>
+        <ul>
+          <li>Tree felling and sectional dismantling</li>
+          <li>Crown reduction, thinning and lifting</li>
+          <li>Deadwooding and pollarding</li>
+          <li>Stump grinding and removal</li>
+          <li>Hedge trimming and removal</li>
+          <li>Site clearance and green waste disposal</li>
+          <li>Storm damage and emergency callouts</li>
+        </ul>
+
+        <h2>Areas we also cover</h2>
+        <p>
+          We work across County Durham. See <a href="/areas/">all the areas we cover</a>.
+        </p>
+      </div>
+
+      <aside class="contact-details">
+        <h2>Free quote in {town}</h2>
+        <p>Tell us where the tree is, what is nearby, and whether access is restricted. We will get back to you with a free written quote.</p>
+        <p>Free inspection, fixed written quote, no obligation.</p>
+        <a class="btn btn-primary" href="/contact/">Get a free quote</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Need a tree surgeon in {town}?</h2>
+      <p>Free inspection and written quote. Send us the details today.</p>
+      <a class="btn btn-primary" href="/contact/">Get a free quote</a>
+    </div>
+  </section>
+</Layout>

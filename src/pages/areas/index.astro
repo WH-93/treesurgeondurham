@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { areas } from '../../data/areas';
+
+const title = 'Areas We Cover | Tree Surgeon Durham';
+const description = 'Tree surgeon covering Durham, Chester-le-Street, Consett, Bishop Auckland, Spennymoor and villages across County Durham. Free inspection and written quote.';
+---
+
+<Layout title={title} description={description}>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Areas We Cover</h1>
+      <p>Tree felling, removal, stump grinding and pruning across Durham city and County Durham, including the surrounding towns and villages.</p>
+    </div>
+  </section>
+
+  <section class="page-main">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Towns and villages we cover</h2>
+        <p>Select your area for details of the tree services available there.</p>
+      </div>
+      <div class="services-grid">
+        {
+          areas.map((area) => (
+            <a class="service-card" href={`/areas/${area.slug}/`}>
+              <h3>Tree Surgeon {area.name}</h3>
+              <p>Felling, removal, stump grinding and more in {area.name}.</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Don't see your area?</h2>
+      <p>We cover the whole of County Durham. Send us your postcode and we will confirm.</p>
+      <a class="btn btn-primary" href="/contact/">Get a free quote</a>
+    </div>
+  </section>
+</Layout>
