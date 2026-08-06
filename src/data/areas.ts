@@ -3,7 +3,6 @@ export interface Area {
   name: string;
   intro: string;
   work: string;
-  roads: string;
   access: string;
   species: string;
   wind: string;
@@ -18,7 +17,6 @@ export const areas: Area[] = [
       'Durham city sits on the River Wear, with steep wooded banks and a dense tree canopy around the cathedral and castle peninsula. Gardens here are often terraced into the valley sides, so trees are close to buildings and access is frequently tight.',
     work:
       'Tree work in Durham city commonly means taking overgrown garden trees back from houses, sectional dismantling where there is no room to fell, clearing storm damage, and removing trees too large for the space.',
-    roads: 'The A167 runs through the city, with the A690 and A691 feeding in and the A1(M) at junction 62 nearby. City centre streets are narrow and mostly permit-parking.',
     access:
       'Many Durham gardens are reached by narrow lanes, shared drives or steep steps, so kit often has to be carried in and timber carried out. Parking is a real constraint in the centre.',
     species:
@@ -34,9 +32,8 @@ export const areas: Area[] = [
       'Chester-le-Street is a market town on the River Wear, roughly six miles north of Durham, with a Roman fort origin (Concangis). Older streets near the market place sit alongside larger gardens on the edges towards Lumley.',
     work:
       'Homes in Chester-le-Street and the surrounding villages often have mature garden trees that have outgrown their plots, needing reduction, removal or stump grinding to reclaim the garden.',
-    roads: 'The A167 (Front Street) runs through the town centre, the A693 heads east towards Sunderland and the A1(M) passes at junction 63.',
     access:
-      'Town centre streets are tight and the Saturday market restricts access on market days. Most residential streets off the A167 allow van parking but not large machinery.',
+      'Town centre streets are tight and the Saturday market restricts access on market days. Most residential streets off the main road allow van parking but not large machinery.',
     species:
       'Beech, sycamore, lime and horse chestnut line the older streets and gardens, with conifer screens on the newer developments around the edges of the town.',
     wind: 'The Wear valley offers some shelter, but the town is exposed to wind coming down the valley from the north-east.',
@@ -50,7 +47,6 @@ export const areas: Area[] = [
       'Consett sits high on the edge of the Derwent Valley, west of Durham, one of the highest towns in England. The former steel town has steep streets and exposed gardens that take the brunt of weather coming off the Pennines.',
     work:
       'Exposed sites around Consett mean trees take storm damage first. We deal with split limbs, leaning trees and removals where wind has made a tree unsafe, plus the usual reductions and crown work.',
-    roads: 'The A692 runs past the town from Durham, the A691 connects to Lanchester and the A694 heads down into the Derwent Valley.',
     access:
       'Streets around Consett are steep and many gardens back onto embankments. The high position means strong wind on site, which we factor into how we rig and dismantle.',
     species:
@@ -66,7 +62,6 @@ export const areas: Area[] = [
       'Bishop Auckland is a market town at the meeting of the River Wear and the River Gaunless, south-west of Durham, with Auckland Castle and its grounds at the heart of the town.',
     work:
       'Tree work around Bishop Auckland spans small garden trees needing a tidy-up through to large specimen trees in the older grounds, requiring reduction or full removal with the timber taken away.',
-    roads: 'The A689 (Newgate Street) is the main route through town, the A688 heads east to Spennymoor and the A68 runs west towards the Pennines.',
     access:
       'The town centre around the Market Place has narrow streets and parking restrictions. Many of the larger gardens sit on the slopes down to the Wear and Gaunless, with awkward vehicle access.',
     species:
@@ -82,7 +77,6 @@ export const areas: Area[] = [
       'Spennymoor sits on high ground between Durham and Bishop Auckland, a former pit town of older terraced streets and newer estates with established gardens.',
     work:
       'Common jobs in Spennymoor are crown reductions on trees planted decades ago that now block light, plus hedge removals and stump grinding to open up gardens.',
-    roads: 'The A688 runs through the town, with the A167 at Thinford a short distance west and the A1(M) about five miles east.',
     access:
       'Terraced streets in the older parts of town have rear access via ginnels and alleys, which can limit what machinery we can get to the garden.',
     species:
@@ -98,7 +92,6 @@ export const areas: Area[] = [
       'Stanley is a hilltop town between Chester-le-Street and Consett, one of the highest towns in County Durham. The name comes from the Old English for "stony woodland clearing", and it was built on coal mining.',
     work:
       'The exposed position around Stanley means trees take a battering in strong winds. We prioritise storm-damaged trees and unsafe leaning specimens here, alongside routine reductions and removals.',
-    roads: 'The A693 runs through the town centre, connecting Chester-le-Street to Consett, with the A6076 heading south towards Lanchester.',
     access:
       'The town is built on a hilltop with steep streets and terraced rows. Rear gardens are often reached through narrow passages, and the high, open position means wind on site is a factor.',
     species:
@@ -114,7 +107,6 @@ export const areas: Area[] = [
       'Lanchester sits on the A691 west of Durham, on the edge of the Derwent Valley, a village of older stone houses and established gardens with mature trees. The Romans built a fort (Longovicium) on the hill above.',
     work:
       'Older gardens in Lanchester often hold trees planted half a century ago that now crowd the house. Crown thinning, lifting and deadwood removal keep them safe and let light in.',
-    roads: 'The A691 runs through the village between Durham and Consett, with the A6076 joining from Stanley.',
     access:
       'The older part of the village has narrow lanes and stone-walled gardens, so access for machinery is limited and we often work by hand or with sectional rigging.',
     species:
@@ -130,7 +122,6 @@ export const areas: Area[] = [
       'Sacriston is a former colliery village three miles north of Durham, taking its name from Sacristan\'s Heugh, the estate that funded repairs to Durham Cathedral. It has modern estates and older streets set around the village centre.',
     work:
       'Semi-mature garden trees are the norm in Sacriston. We carry out reductions, removals and stump grinding to keep gardens manageable, and deal with the ash dieback cases that are becoming common.',
-    roads: 'The A167 runs past the village between Durham and Chester-le-Street, with the A693 to the north and the A691 to the west.',
     access:
       'Most gardens are reached from standard streets with kerb parking, though some older terraces have restricted rear access. Generally straightforward access compared with the city.',
     species:
@@ -146,7 +137,6 @@ export const areas: Area[] = [
       'Brandon lies along the A690 south-east of Durham, a former colliery village with a mix of older terraces and newer housing with gardens backing onto green space.',
     work:
       'Garden trees in Brandon often grow unchecked for years. We bring them back with crown work or remove them entirely, leaving the stump ground out and the site clean.',
-    roads: 'The A690 runs through the village linking Durham to the A1(M) at junction 62, and the B6302 heads north towards the Browney valley.',
     access:
       'Terraced rows in the older part of the village have rear access via alleys, while the newer estates have standard drives. Some gardens back onto the burn and are only reachable on foot.',
     species:
@@ -162,7 +152,6 @@ export const areas: Area[] = [
       'Coxhoe is a village on the limestone ridge east of Durham, off the A177. Its position on the escarpment means exposed gardens and strong winds off the Durham plateau.',
     work:
       'Exposure is the issue in Coxhoe. We deal with wind-damaged trees, storm response and preventative removals before a tree becomes a problem, plus the usual reductions and hedge work.',
-    roads: 'The A177 runs through the village between Durham and the A1(M), and the B6291 heads east towards the coast.',
     access:
       'The village sits on a ridge, so many gardens drop steeply away from the road. Access is often better from the rear, and we plan machinery access carefully.',
     species:
@@ -178,7 +167,6 @@ export const areas: Area[] = [
       'Ferryhill sits on the old A167 route south of Durham, in the gap through the limestone escarpment where the railway and road cut through the ridge. The town has steep streets and terraced housing with small gardens.',
     work:
       'Smaller gardens in Ferryhill mean trees get close to houses. We specialise in tight-access removals and sectional dismantling where there is no room for a straight fell.',
-    roads: 'The A167 runs through the town (the old main road before the A1(M) bypassed it), with the A688 to the west and the A1(M) a few miles east.',
     access:
       'The town climbs the escarpment, so many gardens are on steep slopes with narrow access. Trees are often wedged between houses and boundary walls, calling for rope work rather than straight felling.',
     species:
@@ -194,7 +182,6 @@ export const areas: Area[] = [
       'Newton Aycliffe is a post-war new town south of County Durham near the A1(M), with wide avenues, green verges and gardens planted when the town was built in the 1950s.',
     work:
       'Trees planted with the new town in the 1950s are now at the end of their safe life. We carry out removals and replanting advice, plus reductions where trees can be kept.',
-    roads: 'The A167 runs through the town, with the A1(M) at junction 59 close by and the A689 to the south.',
     access:
       'The town was built with wide roads and drives, so access for machinery is generally the easiest of anywhere we work. Most trees are in open gardens or on grass verges.',
     species:
