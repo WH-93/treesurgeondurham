@@ -75,16 +75,6 @@ a:hover { text-decoration: underline; }
 .site-nav a { color: #ddd; }
 .site-nav a:hover { color: #fff; }
 
-.phone-cta {
-  background: var(--orange);
-  color: #fff;
-  font-weight: 700;
-  padding: 0.55rem 1.1rem;
-  border-radius: var(--radius);
-  white-space: nowrap;
-}
-.phone-cta:hover { background: #d4711a; text-decoration: none; }
-
 /* Hero */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), var(--navy);
