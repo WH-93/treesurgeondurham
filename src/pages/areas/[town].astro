@@ -12,11 +12,19 @@ export function getStaticPaths() {
 const { area } = Astro.props;
 const town = area.name;
 
-const title = `Tree Surgeon ${town} | Tree Felling, Removal & Stump Grinding`;
-const description = `Tree surgeon in ${town}. Tree felling, removal, stump grinding, crown reduction and emergency work in ${town} and surrounding County Durham villages. Free inspection and written quote.`;
+const title = `Tree Surgeon ${town} | County Durham`;
+const description = `Tree surgeon in ${town}. Tree felling, removal, stump grinding, crown reduction and emergency work across County Durham. Free inspection and written quote.`;
 ---
 
 <Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Tree surgeon in ${town}`,
+    serviceType: "Tree felling and tree removal",
+    areaServed: { "@type": "City", name: town },
+    provider: { "@id": "https://treesurgeondurham.co.uk/#service" }
+  })} />
   <section class="page-hero">
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb">
@@ -47,9 +55,17 @@ const description = `Tree surgeon in ${town}. Tree felling, removal, stump grind
         </ul>
 
         <h2>Areas we also cover</h2>
-        <p>
-          We work across County Durham. See <a href="/areas/">all the areas we cover</a>.
-        </p>
+        <p>We work across County Durham. See <a href="/areas/">all the areas we cover</a>, or view the other towns and villages nearby:</p>
+        <ul>
+          {
+            areas
+              .filter((a) => a.slug !== area.slug)
+              .slice(0, 6)
+              .map((a) => (
+                <li><a href={`/areas/${a.slug}/`}>Tree Surgeon {a.name}</a></li>
+              ))
+          }
+        </ul>
       </div>
 
       <aside class="contact-details">

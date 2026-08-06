@@ -28,6 +28,31 @@ const { title, description } = Astro.props;
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "TreeCareService",
+          "@id": "https://treesurgeondurham.co.uk/#service",
+          name: "Tree Surgeon Durham",
+          url: "https://treesurgeondurham.co.uk/",
+          image: "https://treesurgeondurham.co.uk/logo.png",
+          description: "Tree felling, removal, stump grinding and pruning across Durham and County Durham.",
+          areaServed: [
+            { "@type": "City", name: "Durham" },
+            { "@type": "City", name: "Chester-le-Street" },
+            { "@type": "City", name: "Consett" },
+            { "@type": "City", name: "Bishop Auckland" },
+            { "@type": "City", name: "Spennymoor" },
+            { "@type": "City", name: "Stanley" }
+          ],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Durham",
+            addressRegion: "County Durham",
+            addressCountry: "GB"
+          },
+          geo: { "@type": "GeoCoordinates", latitude: 54.7753, longitude: -1.5849 },
+          priceRange: "££",
+          openingHours: "Mo-Sa 08:00-18:00"
+        },
+        {
           "@type": "Organization",
           "@id": "https://treesurgeondurham.co.uk/#organization",
           name: "Tree Surgeon Durham",

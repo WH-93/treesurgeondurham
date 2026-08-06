@@ -1,13 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { areas } from '../data/areas';
 
-const title = 'Tree Surgeon Durham | Tree Felling, Removal & Stump Grinding';
+const title = 'Tree Surgeon Durham | Tree Felling & Stump Grinding';
 const description = 'Tree surgeon in Durham. Tree felling, removal, stump grinding, crown reduction and emergency work across County Durham. Free inspection and written quote.';
+
+const faqs = [
+  {
+    q: 'Do I need permission to fell a tree?',
+    a: 'Most trees in a garden do not need permission, but trees in Conservation Areas or with a Tree Preservation Order (TPO) do. We check before any work starts and handle the paperwork where needed.',
+  },
+  {
+    q: 'Are your quotes really free?',
+    a: 'Yes. We inspect the site and give a fixed written quote with no call-out charge and no obligation.',
+  },
+  {
+    q: 'Do you take the waste away?',
+    a: 'Yes. Timber, branches and green waste are removed from site as part of the job unless you ask to keep the logs.',
+  },
+  {
+    q: 'What areas do you cover?',
+    a: 'Durham city and the surrounding County Durham area, including Chester-le-Street, Spennymoor, Bishop Auckland, Consett, and the villages in between.',
+  },
+  {
+    q: 'How quickly can you respond to storm damage?',
+    a: 'Urgent callouts are prioritised. Call us and we will give you a time frame for the day.',
+  },
+  {
+    q: 'Can you take down a tree close to my house?',
+    a: 'Yes. Where a tree is close to a building we use sectional dismantling: the tree is climbed and lowered in pieces rather than felled in one go. This is standard for most garden trees in Durham.',
+  },
+];
 ---
 
 <Layout title={title} description={description}>
-  <section class="hero">
+  <section class="hero" style="background: linear-gradient(rgba(10,25,45,0.72), rgba(10,25,45,0.82)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Durham_MMB_02_Cathedral.jpg/1600px-Durham_MMB_02_Cathedral.jpg') center/cover no-repeat; background-color: var(--navy);">
     <div class="container hero-inner">
+      <img class="hero-logo" src="/logo.png" alt="Tree Surgeon Durham logo" width="112" height="112" />
       <span class="eyebrow">County Durham</span>
       <h1>Tree Surgeon Durham</h1>
       <p class="lead">Tree felling, removal, stump grinding and pruning across Durham and County Durham. Free inspection and written quote, no obligation.</p>
@@ -65,7 +94,31 @@ const description = 'Tree surgeon in Durham. Tree felling, removal, stump grindi
     </div>
   </section>
 
-  <section class="section section-alt" id="how-it-works">
+  <section class="section section-alt" id="areas">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Tree surgeon across County Durham</h2>
+        <p>Based in Durham and working throughout the county. See the tree services we offer in your area.</p>
+      </div>
+      <div class="durham-strip">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Durham_Castle%2C_April_2017_%2814%29_%2833459522640%29.jpg/960px-Durham_Castle%2C_April_2017_%2814%29_%2833459522640%29.jpg" alt="Durham Castle and the city centre" loading="lazy" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Durham_River_Wear_2.jpg/960px-Durham_River_Wear_2.jpg" alt="The River Wear in Durham" loading="lazy" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Woodland_-_geograph.org.uk_-_1911113.jpg/960px-Woodland_-_geograph.org.uk_-_1911113.jpg" alt="Mature woodland in County Durham" loading="lazy" />
+      </div>
+      <div class="services-grid">
+        {
+          areas.map((area) => (
+            <a class="service-card" href={`/areas/${area.slug}/`}>
+              <h3>Tree Surgeon {area.name}</h3>
+              <p>Felling, removal, stump grinding and more in {area.name}.</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works">
     <div class="container">
       <div class="section-heading">
         <h2>How it works</h2>
@@ -75,7 +128,7 @@ const description = 'Tree surgeon in Durham. Tree felling, removal, stump grindi
         <div class="step">
           <span class="step-num">1</span>
           <h3>Contact us</h3>
-          <p>Call or send the form with the tree's location, what is nearby, and any access restrictions.</p>
+          <p>Send the form with the tree's location, what is nearby, and any access restrictions.</p>
         </div>
         <div class="step">
           <span class="step-num">2</span>
@@ -96,32 +149,83 @@ const description = 'Tree surgeon in Durham. Tree felling, removal, stump grindi
     </div>
   </section>
 
-  <section class="section" id="faq">
+  <section class="section section-alt" id="why-us">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why choose a Durham tree surgeon</h2>
+        <p>What you get with every job, and the things worth asking any tree surgeon about.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>Fully insured</h3>
+          <p>Public liability cover on every job, domestic and commercial.</p>
+        </div>
+        <div class="why-item">
+          <h3>Fixed written quotes</h3>
+          <p>You know the price before work starts. No call-out charge, no surprises.</p>
+        </div>
+        <div class="why-item">
+          <h3>Sectional dismantling</h3>
+          <p>Trees close to houses, walls and power lines are climbed and lowered in pieces, not felled onto the garden.</p>
+        </div>
+        <div class="why-item">
+          <h3>Waste taken away</h3>
+          <p>Timber, brash and green waste leave the site with us. Keep the logs if you want them.</p>
+        </div>
+        <div class="why-item">
+          <h3>Permission handled</h3>
+          <p>We check for Tree Preservation Orders and Conservation Area rules before any work starts.</p>
+        </div>
+        <div class="why-item">
+          <h3>Emergency response</h3>
+          <p>Storm damage and unsafe trees are prioritised across County Durham.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Tree surgery in Durham</h2>
+        <p>A look at the work involved in felling, stump grinding and hedge care.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Felling_a_Tree_2018.jpg/960px-Felling_a_Tree_2018.jpg" alt="Tree felling with a chainsaw during a removal job" loading="lazy" />
+          <figcaption>Tree felling and removal</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Stump-grinder.jpg" alt="Stump grinder removing a tree stump below ground level" loading="lazy" />
+          <figcaption>Stump grinding</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Hedge_Trimming_-_geograph.org.uk_-_212128.jpg" alt="Hedge trimming with a petrol hedge cutter" loading="lazy" />
+          <figcaption>Hedge trimming and reduction</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/SRT_Climbing_Device.jpg/960px-SRT_Climbing_Device.jpg" alt="Rope access climbing equipment used for sectional dismantling" loading="lazy" />
+          <figcaption>Rope access and sectional dismantling</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="faq">
     <div class="container">
       <div class="section-heading">
         <h2>Common questions</h2>
+        <p>Straight answers about permission, quotes, waste and emergency work.</p>
       </div>
       <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question" type="button">Do I need permission to fell a tree?</button>
-          <div class="faq-answer"><p>Most trees in a garden do not need permission, but trees in Conservation Areas or with a Tree Preservation Order (TPO) do. We check before any work starts and handle the paperwork where needed.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" type="button">Are your quotes really free?</button>
-          <div class="faq-answer"><p>Yes. We inspect the site and give a fixed written quote with no call-out charge and no obligation.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" type="button">Do you take the waste away?</button>
-          <div class="faq-answer"><p>Yes. Timber, branches and green waste are removed from site as part of the job unless you ask to keep the logs.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" type="button">What areas do you cover?</button>
-          <div class="faq-answer"><p>Durham city and the surrounding County Durham area, including Chester-le-Street, Spennymoor, Bishop Auckland, Consett, and the villages in between.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" type="button">How quickly can you respond to storm damage?</button>
-          <div class="faq-answer"><p>Urgent callouts are prioritised. Call us and we will give you a time frame for the day.</p></div>
-        </div>
+        {
+          faqs.map((f) => (
+            <div class="faq-item">
+              <button class="faq-question" type="button">{f.q}</button>
+              <div class="faq-answer"><p>{f.a}</p></div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -129,11 +233,21 @@ const description = 'Tree surgeon in Durham. Tree felling, removal, stump grindi
   <section class="cta-band">
     <div class="container">
       <h2>Need a tree surgeon in Durham?</h2>
-      <p>Free inspection and written quote. Call today or send us the details.</p>
+      <p>Free inspection and written quote. Send us the details today.</p>
       <a class="btn btn-primary" href="/contact/">Get a free quote</a>
     </div>
   </section>
 </Layout>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+})} />
 
 <script>
   document.querySelectorAll('.faq-question').forEach((btn) => {
