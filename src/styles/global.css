@@ -53,10 +53,13 @@ a:hover { text-decoration: underline; }
 .brand:hover { text-decoration: none; }
 
 .brand-mark {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  background: #fff;
   border-radius: var(--radius);
   object-fit: contain;
+  box-sizing: border-box;
 }
 
 .brand-name { font-weight: 700; font-size: 1.05rem; }
