@@ -1,0 +1,146 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Tree Surgeon Durham | Tree Felling, Removal & Stump Grinding';
+const description = 'Tree surgeon in Durham. Tree felling, removal, stump grinding, crown reduction and emergency work across County Durham. Free inspection and written quote.';
+---
+
+<Layout title={title} description={description}>
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow">County Durham</span>
+      <h1>Tree Surgeon Durham</h1>
+      <p class="lead">Tree felling, removal, stump grinding and pruning across Durham and County Durham. Free inspection and written quote, no obligation.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:07503512953">Call 07503 512953</a>
+        <a class="btn btn-outline" href="/contact/">Get a free quote</a>
+      </div>
+      <div class="hero-trust">
+        <span>Fully insured</span>
+        <span>Free written quotes</span>
+        <span>Covering Durham &amp; County Durham</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Tree services in Durham</h2>
+        <p>Domestic and commercial tree work. We inspect the site, explain what needs doing and why, then quote a fixed price.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Tree felling</h3>
+          <p>Full tree removal, including sectional dismantling where access is tight or targets are nearby.</p>
+        </div>
+        <div class="service-card">
+          <h3>Crown reduction &amp; thinning</h3>
+          <p>Reduce height or spread to keep trees in proportion with the site, letting more light in.</p>
+        </div>
+        <div class="service-card">
+          <h3>Crown lifting</h3>
+          <p>Raise the lower canopy to clear buildings, vehicles, paths and sight lines.</p>
+        </div>
+        <div class="service-card">
+          <h3>Deadwood &amp; pollarding</h3>
+          <p>Remove dead or unsafe branches, or bring trees back under control with regular pollarding.</p>
+        </div>
+        <div class="service-card">
+          <h3>Stump grinding</h3>
+          <p>Grind stumps below ground level so the area can be re-turfed, seeded or paved over.</p>
+        </div>
+        <div class="service-card">
+          <h3>Hedge trimming &amp; removal</h3>
+          <p>Trim, reduce or remove overgrown hedges, including leylandii and conifer screens.</p>
+        </div>
+        <div class="service-card">
+          <h3>Site clearance</h3>
+          <p>Clear overgrown gardens, scrub, brambles and unwanted growth. Green waste taken away.</p>
+        </div>
+        <div class="service-card">
+          <h3>Storm damage &amp; emergencies</h3>
+          <p>Make dangerous or fallen trees safe. Priority response for urgent callouts across County Durham.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How it works</h2>
+        <p>Straightforward from quote to clean-up.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Contact us</h3>
+          <p>Call or send the form with the tree's location, what is nearby, and any access restrictions.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Free inspection</h3>
+          <p>We visit the site, assess the work and give a fixed written quote. No obligation.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Work done</h3>
+          <p>The job is carried out safely, then all timber, branches and green waste are taken away.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <h3>Site left clean</h3>
+          <p>We leave the site tidy and the stump ground out if required, so the area is usable again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button">Do I need permission to fell a tree?</button>
+          <div class="faq-answer"><p>Most trees in a garden do not need permission, but trees in Conservation Areas or with a Tree Preservation Order (TPO) do. We check before any work starts and handle the paperwork where needed.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button">Are your quotes really free?</button>
+          <div class="faq-answer"><p>Yes. We inspect the site and give a fixed written quote with no call-out charge and no obligation.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button">Do you take the waste away?</button>
+          <div class="faq-answer"><p>Yes. Timber, branches and green waste are removed from site as part of the job unless you ask to keep the logs.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button">What areas do you cover?</button>
+          <div class="faq-answer"><p>Durham city and the surrounding County Durham area, including Chester-le-Street, Spennymoor, Bishop Auckland, Consett, and the villages in between.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button">How quickly can you respond to storm damage?</button>
+          <div class="faq-answer"><p>Urgent callouts are prioritised. Call us and we will give you a time frame for the day.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Need a tree surgeon in Durham?</h2>
+      <p>Free inspection and written quote. Call today or send us the details.</p>
+      <a class="btn btn-primary" href="/contact/">Get a free quote</a>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      item.toggleAttribute('data-open');
+    });
+  });
+</script>
