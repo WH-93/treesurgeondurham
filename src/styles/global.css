@@ -135,6 +135,7 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-logo {
+  display: block;
   width: 112px;
   height: 112px;
   padding: 10px;
