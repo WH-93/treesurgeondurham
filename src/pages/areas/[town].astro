@@ -13,7 +13,7 @@ const { area } = Astro.props;
 const town = area.name;
 
 const title = `Tree Surgeon ${town} | County Durham`;
-const description = `Tree surgeon in ${town}. Tree felling, removal, stump grinding, crown reduction and emergency work across County Durham. Free inspection and written quote.`;
+const description = `Tree surgeon in ${town}. Tree felling, removal, stump grinding, crown reduction and emergency work in ${town} and across County Durham. Free inspection and written quote.`;
 ---
 
 <Layout title={title} description={description}>
@@ -42,6 +42,13 @@ const description = `Tree surgeon in ${town}. Tree felling, removal, stump grind
         <p>{area.intro}</p>
         <p>{area.work}</p>
         <p>All work includes a free inspection and fixed written quote, with timber, branches and green waste taken away when the job is done.</p>
+
+        <h2>Local knowledge: working in {town}</h2>
+        <p><strong>Getting there:</strong> {area.roads}</p>
+        <p><strong>Access on site:</strong> {area.access}</p>
+        <p><strong>Trees you are most likely to have:</strong> {area.species}</p>
+        <p><strong>Wind and storm risk:</strong> {area.wind}</p>
+        <p><strong>Permissions and Conservation Areas:</strong> {area.conservation}</p>
 
         <h2>Services available in {town}</h2>
         <ul>

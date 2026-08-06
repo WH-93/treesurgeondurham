@@ -1,0 +1,63 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/guides/">Guides</a>
+      </nav>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  </section>
+
+  <section class="page-main">
+    <div class="container">
+      <article class="prose guide-content">
+        <slot />
+      </article>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Need a tree surgeon in Durham?</h2>
+      <p>Free inspection and written quote. Send us the details today.</p>
+      <a class="btn btn-primary" href="/contact/">Get a free quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .guide-content { max-width: 780px; }
+  .guide-content h2 { margin-top: 2.5rem; }
+  .guide-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  .guide-content th, .guide-content td {
+    border: 1px solid var(--border);
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+  }
+  .guide-content th { background: #f7f7f5; font-weight: 700; }
+  .guide-content ul { margin-bottom: 1.5rem; }
+  .guide-content blockquote {
+    border-left: 4px solid var(--orange);
+    background: #fdf8ee;
+    padding: 0.9rem 1.2rem;
+    margin: 1.5rem 0;
+    color: #444;
+  }
+</style>

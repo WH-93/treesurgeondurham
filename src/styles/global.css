@@ -134,6 +134,19 @@ a:hover { text-decoration: underline; }
   color: #ccc;
 }
 
+.offer-bar {
+  margin-top: 1.8rem;
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: var(--radius);
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.offer-bar strong { color: var(--orange); }
+
 .hero-logo {
   display: block;
   width: 112px;
