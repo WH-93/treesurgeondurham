@@ -1,7 +1,7 @@
 :root {
-  --navy: #171717;
-  --navy-light: #262626;
-  --orange: #e67e22;
+  --navy: #14304f;
+  --navy-light: #1e4266;
+  --orange: #c9962e;
   --green: #2d6a2e;
   --bg: #ffffff;
   --text: #1a1a1a;
@@ -53,15 +53,10 @@ a:hover { text-decoration: underline; }
 .brand:hover { text-decoration: none; }
 
 .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   width: 40px;
   height: 40px;
-  background: var(--orange);
-  color: #fff;
-  font-weight: 800;
   border-radius: var(--radius);
+  object-fit: contain;
 }
 
 .brand-name { font-weight: 700; font-size: 1.05rem; }
@@ -122,7 +117,7 @@ a:hover { text-decoration: underline; }
 .btn:hover { text-decoration: none; }
 
 .btn-primary { background: var(--orange); color: #fff; }
-.btn-primary:hover { background: #d4711a; }
+.btn-primary:hover { background: #b5851f; }
 
 .btn-outline { border: 2px solid #fff; color: #fff; }
 .btn-outline:hover { background: #fff; color: var(--navy); }
@@ -292,8 +287,8 @@ a:hover { text-decoration: underline; }
 
 /* Footer */
 .site-footer {
-  background: #111;
-  color: #aaa;
+  background: #0f2238;
+  color: #a8b8c8;
   padding-block: 3rem 1.5rem;
   font-size: 0.92rem;
 }
