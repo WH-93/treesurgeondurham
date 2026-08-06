@@ -23,7 +23,8 @@ Domain: treesurgeondurham.co.uk (Cloudflare Pages custom domain, zone active in 
 ## Contact / form
 
 The contact form submits via FormSubmit.co to enquiries@treefellingnearme.co.uk
-(same operator as treefellingnearme.co.uk). No phone number on the site for now.
+(same operator as treefellingnearme.co.uk). The address is only used as the
+form's delivery target — no phone or email is shown on the site.
 
 ## Notes
 
